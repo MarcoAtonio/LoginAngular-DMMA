@@ -1,0 +1,55 @@
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.example-button-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px;
+}
+
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+
+.separator:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .25em;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons button {
+  margin: 0 10px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}

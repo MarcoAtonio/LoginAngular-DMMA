@@ -1,0 +1,23 @@
+<div class="password-form">
+  <mat-form-field class="password-full-width">
+    <mat-label>Password</mat-label>
+    <mat-icon matPrefix>lock</mat-icon>
+    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="passwordFormControl" maxlength="8">
+    <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <mat-error ngIf="passwordFormControl.hasError('required')">
+      Password is <strong>required,minuscula,mayuscula,numero y caracter especial</strong>
+    </mat-error>
+    <mat-error ngIf="passwordFormControl.hasError('minlength') || passwordFormControl.hasError('maxlength')">
+    
+    </mat-error>
+
+    <!-- <mat-error ngIf="passwordFormControl.hasError('pattern')">
+      <div ngIf="passwordFormControl.hasError('uppercase')">Password must contain at least one uppercase letter.</div>
+      <div ngIf="passwordFormControl.hasError('lowercase')">Password must contain at least one lowercase letter.</div>
+      <div ngIf="passwordFormControl.hasError('number')">Password must contain at least one number.</div>
+      <div ngIf="passwordFormControl.hasError('special')">Password must contain at least one special caracter (!#$%^&*).</div>
+    </mat-error> -->
+  </mat-form-field>
+</div>
